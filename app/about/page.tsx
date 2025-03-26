@@ -9,31 +9,25 @@ export default function AboutPage() {
     { name: "Node.js", level: 80 },
     { name: "HTML & CSS", level: 95 },
     { name: "UI/UX Design", level: 75 },
-    { name: "Database Design", level: 70 },
+    { name: "Database Design", level: 80 },
   ]
 
   const experiences = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Solutions Inc.",
-      period: "2021 - Present",
+      title: "Software Developer Intern",
+      company: "KPMG India",
+      period: "August 2024-September 2024",
       description:
         "Lead the frontend development team in building responsive web applications using React and Next.js. Implemented CI/CD pipelines and improved performance by 40%.",
     },
     {
-      title: "Frontend Developer",
-      company: "Digital Innovations",
-      period: "2018 - 2021",
+      title: "Sotware Developer Intern",
+      company: "OPM Corporation",
+      period: "May 2024 - July 2024",
       description:
         "Developed and maintained multiple client websites. Collaborated with designers to implement pixel-perfect UI. Worked with REST APIs and state management libraries.",
     },
-    {
-      title: "Junior Web Developer",
-      company: "Creative Agency",
-      period: "2016 - 2018",
-      description:
-        "Built responsive websites for clients using HTML, CSS, and JavaScript. Assisted in UX research and wireframing.",
-    },
+    
   ]
 
   const education = [
@@ -148,13 +142,13 @@ export default function AboutPage() {
                 <TabsList className="grid w-full grid-cols-2 mb-6 bg-black/20 border border-white/10">
                   <TabsTrigger
                     value="experience"
-                    className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
+                    className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary text-lg"
                   >
                     Experience
                   </TabsTrigger>
                   <TabsTrigger
                     value="education"
-                    className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
+                    className="text-lg data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
                   >
                     Education
                   </TabsTrigger>
