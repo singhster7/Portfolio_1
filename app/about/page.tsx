@@ -14,7 +14,7 @@ export default function AboutPage() {
 
   const experiences = [
     {
-      title: "Software Developer Intern",
+      title: "Tax Technology and Transfomration Intern",
       company: "KPMG India",
       period: "August 2024-September 2024",
       description:

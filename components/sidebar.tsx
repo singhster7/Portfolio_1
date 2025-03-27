@@ -28,9 +28,9 @@ export default function Sidebar() {
 
   const navItems = [
     { name: "Home", path: "/", icon: <Home className="h-5 w-5" /> },
-    { name: "About", path: "/about", icon: <User className="h-5 w-5" /> },
+    
     { name: "Projects", path: "/projects", icon: <Briefcase className="h-5 w-5" /> },
-    { name: "Blog", path: "/blog", icon: <FileText className="h-5 w-5" /> },
+   
     { name: "Contact", path: "/contact", icon: <Mail className="h-5 w-5" /> },
   ]
 
@@ -104,7 +104,7 @@ export default function Sidebar() {
           {/* Social Links */}
           <div className="mt-auto pt-6 border-t border-white/10">
             <div className="flex justify-center space-x-4 mb-6">
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary">
+              <Button variant="ghost" size="lg" className="rounded-full hover:bg-primary/10 hover:text-primary">
                 <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="h-5 w-5" />
                 </a>

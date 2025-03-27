@@ -2,8 +2,53 @@ import Link from "next/link"
 import { ArrowRight, Github, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Briefcase, GraduationCap } from "lucide-react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
 
 export default function Home() {
+  const skills = [
+    { name: "JavaScript/TypeScript", level: 90 },
+    { name: "React & Next.js", level: 85 },
+    { name: "Node.js", level: 80 },
+    { name: "HTML & CSS", level: 95 },
+    { name: "UI/UX Design", level: 75 },
+    { name: "Database Design", level: 80 },
+  ]
+
+  const experiences = [
+    {
+      title: "Tax Technology and Transfomration Intern",
+      company: "KPMG India",
+      period: "August 2024-September 2024",
+      description:
+        "Lead the frontend development team in building responsive web applications using React and Next.js. Implemented CI/CD pipelines and improved performance by 40%.",
+    },
+    {
+      title: "Sotware Developer Intern",
+      company: "OPM Corporation",
+      period: "May 2024 - July 2024",
+      description:
+        "Developed and maintained multiple client websites. Collaborated with designers to implement pixel-perfect UI. Worked with REST APIs and state management libraries.",
+    },
+    
+  ]
+
+  const education = [
+    {
+      degree: "Master of Computer Science",
+      institution: "Tech University",
+      period: "2014 - 2016",
+      description: "Specialized in Web Technologies and Human-Computer Interaction.",
+    },
+    {
+      degree: "Bachelor of Science in Computer Science",
+      institution: "State University",
+      period: "2010 - 2014",
+      description: "Graduated with honors. Participated in multiple hackathons and coding competitions.",
+    },
+  ]
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -67,76 +112,101 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-between items-center mb-12">
-            <div className="relative">
-              <h2 className="text-3xl font-bold">Featured Projects</h2>
-              <div className="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary to-transparent"></div>
-            </div>
-            <Button variant="ghost" asChild className="group">
-              <Link href="/projects" className="flex items-center">
-                View All
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((project) => (
-              <div
-                key={project}
-                className="group relative bg-black/20 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-primary/30 transition-all duration-300"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="aspect-video bg-muted/30 relative overflow-hidden">
-                  <img
-                    src={`/placeholder.svg?height=200&width=400&text=Project+${project}`}
-                    alt={`Project ${project}`}
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="p-6 relative z-10">
-                  <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                    Project Title {project}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    A brief description of this amazing project and the technologies used to build it.
-                  </p>
-                  <div className="flex gap-2 mb-4">
-                    <Badge variant="secondary" className="bg-black/30 hover:bg-black/40">
-                      React
-                    </Badge>
-                    <Badge variant="secondary" className="bg-black/30 hover:bg-black/40">
-                      Node.js
-                    </Badge>
-                  </div>
-                  <div className="flex gap-3">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      asChild
-                      className="border-white/10 bg-black/20 hover:bg-black/30"
-                    >
-                      <a href="#" target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 h-4 w-4" /> Code
-                      </a>
-                    </Button>
-                    <Button size="sm" asChild className="bg-primary/80 hover:bg-primary">
-                      <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        Live Demo
-                        <ExternalLink className="ml-2 h-3 w-3" />
-                      </a>
-                    </Button>
-                  </div>
-                </div>
+      {/* Featured About */}
+      <section className="mx-2">
+              <div className="relative inline-block mb-6">
+                <h2 className="text-2xl font-bold">Experience & Education</h2>
+                <div className="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary to-transparent"></div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <Tabs defaultValue="experience" className="relative">
+                <TabsList className="grid w-full grid-cols-2 mb-6 bg-black/20 border border-white/10">
+                  <TabsTrigger
+                    value="experience"
+                    className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary text-lg"
+                  >
+                    Experience
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="education"
+                    className="text-lg data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
+                  >
+                    Education
+                  </TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="experience" className="space-y-6">
+                  {experiences.map((exp, index) => (
+                    <Card
+                      key={index}
+                      className="bg-black/20 backdrop-blur-sm border border-white/10 overflow-hidden group hover:border-primary/30 transition-all duration-300"
+                    >
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                      <CardHeader className="flex flex-row items-start gap-4 pb-2">
+                        <Briefcase className="h-5 w-5 mt-1 text-primary" />
+                        <div>
+                          <CardTitle>{exp.title}</CardTitle>
+                          <CardDescription>
+                            {exp.company} | {exp.period}
+                          </CardDescription>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">{exp.description}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </TabsContent>
+
+                <TabsContent value="education" className="space-y-6">
+                  {education.map((edu, index) => (
+                    <Card
+                      key={index}
+                      className="bg-black/20 backdrop-blur-sm border border-white/10 overflow-hidden group hover:border-primary/30 transition-all duration-300"
+                    >
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                      <CardHeader className="flex flex-row items-start gap-4 pb-2">
+                        <GraduationCap className="h-5 w-5 mt-1 text-primary" />
+                        <div>
+                          <CardTitle>{edu.degree}</CardTitle>
+                          <CardDescription>
+                            {edu.institution} | {edu.period}
+                          </CardDescription>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">{edu.description}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </TabsContent>
+              </Tabs>
+            </section>
+            {/* {skills section} */}
+            <section className="mb-12 mx-2">
+              <div className="relative inline-block mb-6">
+                <h2 className="text-2xl font-bold">Skills</h2>
+                <div className="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary to-transparent"></div>
+              </div>
+              <div className="space-y-4">
+                {skills.map((skill) => (
+                  <div key={skill.name} className="space-y-2">
+                    <div className="flex justify-between">
+                      <span className="font-medium">{skill.name}</span>
+                      <span className="text-muted-foreground">{skill.level}%</span>
+                    </div>
+                    <div className="relative h-2 w-full bg-black/30 rounded-full overflow-hidden">
+                      <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+                      <div
+                        className="h-full bg-gradient-to-r from-primary to-purple-600 rounded-full"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+            {/* {skills section} */}
+
 
       {/* About Section Preview */}
       <section className="py-16 px-4">
