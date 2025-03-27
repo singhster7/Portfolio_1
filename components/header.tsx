@@ -31,9 +31,9 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    
     { name: "Projects", path: "/projects" },
-    { name: "Blog", path: "/blog" },
+   
     { name: "Contact", path: "/contact" },
   ]
 
@@ -47,7 +47,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-primary">
-              John Doe
+              Sanil Singh
             </Link>
           </div>
 

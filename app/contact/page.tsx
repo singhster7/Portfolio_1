@@ -153,7 +153,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <p className="text-muted-foreground">hello@example.com</p>
+                     <a href="mailto:sanilsingh3008@gmail.com"> <p className="text-muted-foreground">sanilsingh3008@gmail.com</p>
+                     </a>
                     </div>
                   </div>
 
@@ -163,7 +164,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium">Phone</h3>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground">+91 9939332348</p>
                     </div>
                   </div>
 
@@ -172,8 +173,9 @@ export default function ContactPage() {
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Location</h3>
-                      <p className="text-muted-foreground">San Francisco, CA</p>
+                      <h3 className="font-medium">Current Location</h3>
+                      <p className="text-muted-foreground">Bangalore,IND</p>
+                      <p className="font-medium">Open to - Hyderabad,Pune,Noida</p>
                     </div>
                   </div>
                 </div>

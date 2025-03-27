@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
 import { cn } from "@/lib/utils"
 
+
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
@@ -65,12 +66,12 @@ export default function Sidebar() {
           <div className="mb-10 text-center">
             <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <img src="/placeholder.svg?height=96&width=96" alt="Profile" className="object-cover" />
+              <img src="/placeholder1.jpeg?height=99&width=96" alt="Profile" className="object-cover" />
             </div>
             <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
-              John Doe
+              Sanil Singh
             </h1>
-            <p className="text-sm text-muted-foreground">Full Stack Developer</p>
+            <p className="text-sm text-muted-foreground">Full Stack Developer | Aspiring Software Engineer</p>
           </div>
 
           {/* Navigation */}
@@ -105,20 +106,16 @@ export default function Sidebar() {
           <div className="mt-auto pt-6 border-t border-white/10">
             <div className="flex justify-center space-x-4 mb-6">
               <Button variant="ghost" size="lg" className="rounded-full hover:bg-primary/10 hover:text-primary">
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/singhster7" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary">
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Button variant="ghost" size="lg" className="rounded-full hover:bg-primary/10 hover:text-primary">
+                <a href="https://www.linkedin.com/in/sanil-singh-3b7b0a225/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary">
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                  <Twitter className="h-5 w-5" />
-                </a>
-              </Button>
+             
             </div>
 
             {/* Theme Toggle */}
