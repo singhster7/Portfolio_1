@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/hooks/use-toast"
+import  toast,{Toaster}  from "react-hot-toast"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -28,11 +28,8 @@ export default function ContactPage() {
 
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    })
+console.log("promise chala")
+toast('Thanks . Sanil will contact you soon.');
 
     setFormData({
       name: "",
@@ -58,7 +55,7 @@ export default function ContactPage() {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-purple-600/20 rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-1000"></div>
               <div className="relative bg-black/20 backdrop-blur-sm rounded-xl border border-white/10 p-8">
                 <h2 className="text-2xl font-bold mb-6 relative inline-block">
-                  Send a Message
+                  Send a Message or <a href="mailto:sanilsingh3008@gmail.com" className="text-purple-600 underline">Mail Me</a>
                   <div className="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary to-transparent"></div>
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -116,9 +113,9 @@ export default function ContactPage() {
                       className="bg-black/30 border-white/10 focus:border-primary/50 focus:ring-primary/50"
                     />
                   </div>
-
                   <Button
                     type="submit"
+                  
                     className="w-full relative group overflow-hidden bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 border-0"
                     disabled={isSubmitting}
                   >
@@ -127,7 +124,9 @@ export default function ContactPage() {
                         <>Sending Message...</>
                       ) : (
                         <>
-                          <Send className="mr-2 h-4 w-4" /> Send Message
+                          <Send className="mr-2 h-4 w-4"
+                           /> Send Message
+                            <Toaster />
                         </>
                       )}
                     </span>
@@ -180,45 +179,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/10">
-                  <h3 className="font-medium mb-3">Connect with me</h3>
-                  <div className="flex gap-3">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="GitHub"
-                      className="p-2 rounded-full bg-black/30 border border-white/10 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
-                    >
-                      <Github className="h-5 w-5" />
-                    </a>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="LinkedIn"
-                      className="p-2 rounded-full bg-black/30 border border-white/10 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
-                    >
-                      <Linkedin className="h-5 w-5" />
-                    </a>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Twitter"
-                      className="p-2 rounded-full bg-black/30 border border-white/10 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
-                    >
-                      <Twitter className="h-5 w-5" />
-                    </a>
-                    <a
-                      href="mailto:hello@example.com"
-                      aria-label="Email"
-                      className="p-2 rounded-full bg-black/30 border border-white/10 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
-                    >
-                      <Mail className="h-5 w-5" />
-                    </a>
-                  </div>
-                </div>
+                
 
                 <div className="pt-4 border-t border-white/10">
                   <h3 className="font-medium mb-3">Availability</h3>

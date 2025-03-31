@@ -6,48 +6,53 @@ import { Briefcase, GraduationCap } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Description } from "@radix-ui/react-toast"
 
 
 export default function Home() {
   const skills = [
-    { name: "JavaScript/TypeScript", level: 90 },
+    { name: "JavaScript", level: 90 },
     { name: "React & Next.js", level: 90 },
     { name: "Node.js", level: 80 },
+    { name: "Database Design", level: 80 },
     { name: "HTML & CSS", level: 95 },
     { name: "UI/UX Design", level: 75 },
-    { name: "Database Design", level: 80 },
+    ,
   ]
 
   const experiences = [
     {
-      title: "Tax Technology and Transfomration Intern",
+      title: "Technology and Transformation Intern",
       company: "KPMG India",
       period: "August 2024-September 2024",
       description:
-        "Lead the frontend development team in building responsive web applications using React and Next.js. Implemented CI/CD pipelines and improved performance by 40%.",
+        "Developed automation scripts and web-based tools using Python and Selenium to streamline tax-related processes, reducing manual input by 40%. Built a document sorter and bulk mailer tool with error logging for efficient data management and communication.",
     },
     {
       title: "Sotware Developer Intern",
       company: "OPM Corporation",
       period: "May 2024 - July 2024",
       description:
-        "Developed and maintained multiple client websites. Collaborated with designers to implement pixel-perfect UI. Worked with REST APIs and state management libraries.",
-    },
+        " Optimized frontend and backend components, ensuring seamless user experienceand efficient data handling.Integrated and optimized RESTful APIs, ensuring smooth data exchange between frontend and backend systems",
+        
+    
+      },
     
   ]
 
   const education = [
     {
-      degree: "Master of Computer Science",
-      institution: "Tech University",
-      period: "2014 - 2016",
-      description: "Specialized in Web Technologies and Human-Computer Interaction.",
+      degree: "Bachelors of Technology",
+      institution: "Kalinga Institute Of Industrial Technology, Bhubaneshwar",
+      period: "2021 - 2025",
+      description:"Course-Computer Science and Communication Engineering"
+     
     },
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "State University",
-      period: "2010 - 2014",
-      description: "Graduated with honors. Participated in multiple hackathons and coding competitions.",
+      degree: "AISSCE (Class 12th)",
+      institution: "Delhi Public School Patna",
+      period: "2019 - 2021",
+      description: "Course-Physics,Chemistry,Mathematics,English",
     },
   ]
   return (
@@ -94,7 +99,7 @@ export default function Home() {
               variant="outline"
               className="px-3 py-1 text-xl bg-primary/5 border-primary/20 hover:bg-primary/10"
             >
-              TypeScript
+              PostgreSQL
             </Badge>
             <Badge
               variant="outline"
@@ -106,7 +111,7 @@ export default function Home() {
               variant="outline"
               className="px-3 py-1 text-xl bg-primary/5 border-primary/20 hover:bg-primary/10"
             >
-              Tailwind CSS
+              Python
             </Badge>
           </div>
 
@@ -116,7 +121,7 @@ export default function Home() {
             <h2 className="text-xl md:text-3xl font-medium text-muted-foreground mb-6 relative">Connect with me</h2>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://github.com/singhster7"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -125,7 +130,7 @@ export default function Home() {
                 <Github className="h-9 w-9" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/sanil-singh-3b7b0a225/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -133,17 +138,9 @@ export default function Home() {
               >
                 <Linkedin className="h-9 w-9" />
               </a>
+              
               <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="p-2 rounded-full bg-black/30 border border-white/10 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
-              >
-                <Twitter className="h-9 w-9" />
-              </a>
-              <a
-                href="mailto:hello@example.com"
+                href="mailto:sanilsingh3008@gmail.com"
                 aria-label="Email"
                 className="p-2 rounded-full bg-black/30 border border-white/10 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
               >
@@ -274,7 +271,7 @@ export default function Home() {
       {/* {skills section} */}
 
       {/* About Section Preview */}
-      <section className="py-16 px-4">
+      <section className="py-4 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-sm border border-white/10 rounded-xl p-8 overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent"></div>
@@ -309,7 +306,7 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-gradient-to-br from-primary/20 to-purple-500/20 backdrop-blur-sm border border-white/10 rounded-xl p-8 overflow-hidden">
+          <div className="relative bg-gradient-to-br from-primary/20 to-yellow-500/20 backdrop-blur-sm border border-white/10 rounded-xl p-8 overflow-hidden">
             <div className="absolute -top-24 -left-24 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl"></div>
 
