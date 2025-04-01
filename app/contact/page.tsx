@@ -126,12 +126,17 @@ toast('Thanks . Sanil will contact you soon.');
                         <>
                           <Send className="mr-2 h-4 w-4"
                            /> Send Message
-                            <Toaster />
+                            
                         </>
                       )}
                     </span>
                     <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-20 transition-opacity"></div>
                   </Button>
+                  <Toaster
+                            position="bottom-center" 
+                            toastOptions={{
+                              style: { marginBottom: '10px' }
+                             }} />
                 </form>
               </div>
             </div>
