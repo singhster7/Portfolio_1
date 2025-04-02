@@ -12,44 +12,16 @@ export default function AboutPage() {
     { name: "Database Design", level: 80 },
   ]
 
-  const experiences = [
-    {
-      title: "Tax Technology and Transfomration Intern",
-      company: "KPMG India",
-      period: "August 2024-September 2024",
-      description:
-        "Lead the frontend development team in building responsive web applications using React and Next.js. Implemented CI/CD pipelines and improved performance by 40%.",
-    },
-    {
-      title: "Sotware Developer Intern",
-      company: "OPM Corporation",
-      period: "May 2024 - July 2024",
-      description:
-        "Developed and maintained multiple client websites. Collaborated with designers to implement pixel-perfect UI. Worked with REST APIs and state management libraries.",
-    },
-    
-  ]
+  
 
-  const education = [
-    {
-      degree: "Master of Computer Science",
-      institution: "Tech University",
-      period: "2014 - 2016",
-      description: "Specialized in Web Technologies and Human-Computer Interaction.",
-    },
-    {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "State University",
-      period: "2010 - 2014",
-      description: "Graduated with honors. Participated in multiple hackathons and coding competitions.",
-    },
-  ]
+ 
 
   return (
     <div className="px-4 py-16">
       <div className="max-w-5xl mx-auto">
         <div className="relative inline-block mb-8">
           <h1 className="text-4xl font-bold">About Me</h1>
+
           <div className="absolute -bottom-2 left-0 h-1 w-16 bg-gradient-to-r from-primary to-transparent"></div>
         </div>
 
@@ -58,24 +30,25 @@ export default function AboutPage() {
             <div className="sticky top-24">
               <div className="relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-1000"></div>
-                <div className="relative aspect-square rounded-xl overflow-hidden mb-6 bg-black/50 backdrop-blur-sm border border-white/10">
+                <div className="relative aspect-square rounded-full overflow-hidden mb-6 bg-black/50 backdrop-blur-sm border border-white/10">
                   <img
-                    src="/placeholder.svg?height=400&width=400"
+                    src="/placeholder1.jpeg?height=400&width=400"
                     alt="John Doe"
                     className="object-cover w-full h-full"
                   />
                 </div>
               </div>
-              <h2 className="text-2xl font-bold mb-2">John Doe</h2>
-              <p className="text-muted-foreground mb-4">Full Stack Developer with 7+ years of experience</p>
+              <h2 className="text-2xl font-bold mb-2">Sanil Singh</h2>
+              <p className="text-muted-foreground mb-4">Software Developer</p>
               <div className="space-y-2 text-sm">
                 <p className="flex items-center gap-2">
                   <span className="font-medium">Location:</span>
-                  <span className="text-muted-foreground">San Francisco, CA</span>
+                  <span className="text-muted-foreground">(Open to all)</span>
+                  <span className="text-muted-foreground">Preferred - Bengaluru,Hyderabad,Pune</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="font-medium">Email:</span>
-                  <span className="text-muted-foreground">hello@example.com</span>
+                  <span className="text-muted-foreground">sanilsingh3008@gmail.com</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="font-medium">Available for:</span>
@@ -89,23 +62,14 @@ export default function AboutPage() {
             <section className="mb-12">
               <div className="relative inline-block mb-4">
                 <h2 className="text-2xl font-bold">My Story</h2>
+                <h1 className="text-xl font-bold">Professional Career</h1>
+
                 <div className="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary to-transparent"></div>
               </div>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  I'm a passionate full stack developer with over 7 years of experience in building web applications. My
-                  journey in web development started during my university years when I built my first website for a
-                  local business.
-                </p>
-                <p>
-                  Since then, I've worked with various technologies and frameworks, always staying up-to-date with the
-                  latest trends and best practices. I specialize in creating responsive, accessible, and performant web
-                  applications that provide exceptional user experiences.
-                </p>
-                <p>
-                  When I'm not coding, you can find me hiking, reading tech blogs, or experimenting with new
-                  technologies. I'm always eager to learn and take on new challenges.
-                </p>
+              <p> I'm a dedicated software developer with experience in full-stack development, AI, and web automation. My journey started with hands-on projects, including a web automation tool during my internship at KPMG. </p> <p> I've worked with various technologies, from building AI-based applications like a virtual mouse to practical solutions like a kitchen inventory management app. I enjoy solving real-world problems with software, leveraging my expertise in data management, automation, and backend systems. </p> <p> Currently, I’m exploring opportunities in tech consulting at EY GDS while working on mapping houses in tier-2 cities for better identification. When I’m not coding, I enjoy keeping up with the latest tech trends and optimizing solutions for efficiency. </p>
+              <h1 className="text-xl font-bold">Apart from Coding</h1>
+                            <p className="font-bold">I know alot about cars, so hit me up if you or someone you know is planning to buy a car.😉 </p>
               </div>
             </section>
 
@@ -133,74 +97,7 @@ export default function AboutPage() {
               </div>
             </section>
 
-            <section>
-              <div className="relative inline-block mb-6">
-                <h2 className="text-2xl font-bold">Experience & Education</h2>
-                <div className="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary to-transparent"></div>
-              </div>
-              <Tabs defaultValue="experience" className="relative">
-                <TabsList className="grid w-full grid-cols-2 mb-6 bg-black/20 border border-white/10">
-                  <TabsTrigger
-                    value="experience"
-                    className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary text-lg"
-                  >
-                    Experience
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="education"
-                    className="text-lg data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
-                  >
-                    Education
-                  </TabsTrigger>
-                </TabsList>
-
-                <TabsContent value="experience" className="space-y-6">
-                  {experiences.map((exp, index) => (
-                    <Card
-                      key={index}
-                      className="bg-black/20 backdrop-blur-sm border border-white/10 overflow-hidden group hover:border-primary/30 transition-all duration-300"
-                    >
-                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                      <CardHeader className="flex flex-row items-start gap-4 pb-2">
-                        <Briefcase className="h-5 w-5 mt-1 text-primary" />
-                        <div>
-                          <CardTitle>{exp.title}</CardTitle>
-                          <CardDescription>
-                            {exp.company} | {exp.period}
-                          </CardDescription>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">{exp.description}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </TabsContent>
-
-                <TabsContent value="education" className="space-y-6">
-                  {education.map((edu, index) => (
-                    <Card
-                      key={index}
-                      className="bg-black/20 backdrop-blur-sm border border-white/10 overflow-hidden group hover:border-primary/30 transition-all duration-300"
-                    >
-                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                      <CardHeader className="flex flex-row items-start gap-4 pb-2">
-                        <GraduationCap className="h-5 w-5 mt-1 text-primary" />
-                        <div>
-                          <CardTitle>{edu.degree}</CardTitle>
-                          <CardDescription>
-                            {edu.institution} | {edu.period}
-                          </CardDescription>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">{edu.description}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </TabsContent>
-              </Tabs>
-            </section>
+            
           </div>
         </div>
       </div>
