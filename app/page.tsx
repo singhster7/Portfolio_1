@@ -176,22 +176,22 @@ export default function Home() {
       </section>
 
       {/* Featured About */}
-      <section className="mx-2">
+      <section className="mx-1">
         <div className="relative inline-block mb-6">
           <h2 className="text-2xl font-bold">Experience & Education</h2>
           <div className="absolute -bottom-2 left-0 h-1 w-12 bg-gradient-to-r from-primary to-transparent"></div>
         </div>
         <Tabs defaultValue="experience" className="relative">
-          <TabsList className="grid w-full grid-cols-2 mb-6 bg-black/20 border border-white/10">
+          <TabsList  className=" grid w-full grid-cols-2 mb-6 bg-black rounded-md overflow-hidden h-12 border border-white/10">
             <TabsTrigger
               value="experience"
-              className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary text-lg"
+              className=" data-[state=active]:bg-primary/20 data-[state=active]:text-primary text-lg"
             >
               Experience
             </TabsTrigger>
             <TabsTrigger
               value="education"
-              className="text-lg data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
+              className=" text-lg data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
             >
               Education
             </TabsTrigger>
