@@ -26,11 +26,13 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
+
+    
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500))
-console.log("promise chala")
-toast('Thanks . Sanil will contact you soon.');
-
+    console.log("promise chala")
+    toast('Thanks . Sanil will contact you soon.');
+    // console.log("form data",formData)
     setFormData({
       name: "",
       email: "",

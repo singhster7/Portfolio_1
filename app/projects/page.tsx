@@ -7,65 +7,68 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Platform",
+      title: "JOBSITE",
       description:
-        "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-      image: "/placeholder.svg?height=300&width=600&text=E-commerce+Platform",
-      tags: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-      github: "#",
-      demo: "#",
+        "Full-stack job application platform designed to streamline interactions between job applicants and recruiters. ",
+      image: "/image1.png?height=300&width=600&text=E-commerce+Platform",
+      tags: ["NodeJS", "ExpressJS", "PassportJS","React.js","Redux","Nodemailer","JWT"],
+      github: "https://github.com/singhster7/jobsite",
+      
       category: "web",
     },
     {
+      id: 6,
+      title: "RIDLIN",
+      description: "Ridlin is a pet services web platform that connects pet owners with local service providers. ",
+      image: "/ridin.png?height=300&width=600&text=Data+Visualization",
+      tags: ["Next JS", "React", "Node.js", "PostgresQL","AWS"],
+      github: "#",
+      demo: "ridlin.com",
+      category: "web",
+    },
+   
+    {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates and team functionality.",
-      image: "/placeholder.svg?height=300&width=600&text=Task+Management+App",
-      tags: ["React", "Firebase", "Redux", "Material UI"],
+      title: "Portfolio Website",
+      description: "A responsive portfolio website template for developers and designers.",
+      image: "/port.png?height=200&width=500&text=Portfolio+Website",
+      tags: ["NextJS", "Typescript","Tailwind CSS", "Vercel"],
+      github: "https://github.com/singhster7/Portfolio_1",
+      demo: "https://sanilsingh.vercel.app/",
+      category: "web",
+    }, 
+    {
+      id: 4,
+      title: "Weather Air",
+      description: "Airport information lookup tool built with React, designed to fetch and display real-time airport data using ICAO codes.",
+      image: "/image.png?height=300&width=600&text=Weather+Dashboard",
+      tags: ["React", "AirportDB API", "JavaScript","HTML/CSS"],
       github: "#",
       demo: "#",
       category: "web",
     },
     {
       id: 3,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website template for developers and designers.",
-      image: "/placeholder.svg?height=300&width=600&text=Portfolio+Website",
-      tags: ["HTML", "CSS", "JavaScript", "GSAP"],
-      github: "#",
-      demo: "#",
+      title: "Task Management App",
+      description: "A basic and minimal task management interface made using only jQuery(differentiating factor) for the backend",
+      image: "/todo.png?height=300&width=600&text=Task+Management+App",
+      tags: ["React", "Firebase", "Redux", "Material UI"],
+      github: "https://github.com/singhster7/BasicToDo",
+      demo: "https://665de93821f2e6074ba07540--aquamarine-moxie-5434e7.netlify.app/",
       category: "web",
     },
-    {
-      id: 4,
-      title: "Weather Dashboard",
-      description: "A weather dashboard that displays current and forecasted weather data for multiple locations.",
-      image: "/placeholder.svg?height=300&width=600&text=Weather+Dashboard",
-      tags: ["React", "OpenWeather API", "Chart.js"],
-      github: "#",
-      demo: "#",
-      category: "web",
-    },
+    
     {
       id: 5,
-      title: "Recipe Finder App",
-      description: "A mobile app that helps users find recipes based on ingredients they have.",
-      image: "/placeholder.svg?height=300&width=600&text=Recipe+Finder+App",
+      title: "Weather Web",
+      description: " Fetches the user’s current geographic location using the Geolocation API and retrieves real-time weather conditions ",
+      image: "/weather.png?height=300&width=600&text=Recipe+Finder+App",
       tags: ["React Native", "Expo", "API Integration"],
       github: "#",
       demo: "#",
       category: "mobile",
     },
-    {
-      id: 6,
-      title: "Data Visualization Dashboard",
-      description: "An interactive dashboard for visualizing complex datasets with filtering capabilities.",
-      image: "/placeholder.svg?height=300&width=600&text=Data+Visualization",
-      tags: ["D3.js", "React", "Node.js", "MongoDB"],
-      github: "#",
-      demo: "#",
-      category: "data",
-    },
+    
   ]
 
   return (
@@ -82,15 +85,7 @@ export default function ProjectsPage() {
             <TabsTrigger value="all" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">
               All Projects
             </TabsTrigger>
-            <TabsTrigger value="web" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">
-              Web Apps
-            </TabsTrigger>
-            <TabsTrigger value="mobile" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">
-              Mobile Apps
-            </TabsTrigger>
-            <TabsTrigger value="data" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">
-              Data Projects
-            </TabsTrigger>
+            
           </TabsList>
 
           <TabsContent value="all" className="mt-6">
