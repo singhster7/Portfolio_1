@@ -13,7 +13,6 @@ export default function ProjectsPage() {
       image: "/image1.png?height=300&width=600&text=E-commerce+Platform",
       tags: ["NodeJS", "ExpressJS", "PassportJS","React.js","Redux","Nodemailer","JWT"],
       github: "https://github.com/singhster7/jobsite",
-      
       category: "web",
     },
     {
@@ -22,8 +21,7 @@ export default function ProjectsPage() {
       description: "Ridlin is a pet services web platform that connects pet owners with local service providers. ",
       image: "/image3.png?height=300&width=600&text=E-commerce+Platform",
       tags: ["Next JS", "React", "Node.js", "PostgresQL","AWS"],
-      github: "#",
-      demo: "ridlin.com",
+      demo: "https://ridlin.com/",
       category: "web",
     },
    
@@ -43,8 +41,8 @@ export default function ProjectsPage() {
       description: "Airport information lookup tool built with React, designed to fetch and display real-time airport data using ICAO codes.",
       image: "/image.png?height=300&width=600&text=Weather+Dashboard",
       tags: ["React", "AirportDB API", "JavaScript","HTML/CSS"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/singhster7/WeatherAir",
+      
       category: "web",
     },
     {
@@ -52,7 +50,7 @@ export default function ProjectsPage() {
       title: "Task Management App",
       description: "A basic and minimal task management interface made using only jQuery(differentiating factor) for the backend",
       image: "/image4.png?height=300&width=600&text=Task+Management+App",
-      tags: ["React", "Firebase", "Redux", "Material UI"],
+      tags: ["React", "jQuery","Material UI"],
       github: "https://github.com/singhster7/BasicToDo",
       demo: "https://665de93821f2e6074ba07540--aquamarine-moxie-5434e7.netlify.app/",
       category: "web",
@@ -60,12 +58,12 @@ export default function ProjectsPage() {
     
     {
       id: 5,
-      title: "Weather Web",
+      title: "FORCast",
       description: " Fetches the user’s current geographic location using the Geolocation API and retrieves real-time weather conditions ",
       image: "/image5.png?height=300&width=600&text=Recipe+Finder+App",
-      tags: ["React Native", "Expo", "API Integration"],
-      github: "#",
-      demo: "#",
+      tags: ["JavaScript", "HTML/CSS", "API Integration"],
+      github: "https://github.com/singhster7/FORcast",
+      
       category: "mobile",
     },
     
@@ -129,7 +127,7 @@ function ProjectGrid({ projects }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
 
-          <div className="p-6 relative z-10">
+          <div className="p-6 relative z-10 ">
             <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
             <p className="text-muted-foreground mb-4">{project.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
@@ -139,18 +137,22 @@ function ProjectGrid({ projects }) {
                 </Badge>
               ))}
             </div>
-            <div className="flex gap-3">
-              <Button variant="outline" size="sm" asChild className="border-white/10 bg-black/20 hover:bg-black/30">
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" /> Code
-                </a>
-              </Button>
-              <Button size="sm" asChild className="bg-primary/80 hover:bg-primary">
-                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center">
-                  Live Demo
-                  <ExternalLink className="ml-2 h-3 w-3" />
-                </a>
-              </Button>
+            <div className="flex gap-3 mt-auto">
+            {project.showGithub !== false && project.github && (
+            <Button variant="outline" size="sm" asChild className="border-white/10 bg-black/20 hover:bg-black/30 ">
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-4 w-4" /> Code
+              </a>
+            </Button>
+              )}
+              {project.showDemo !== false && project.demo && (
+                    <Button size="sm" asChild className="bg-primary/80 hover:bg-primary">
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Live Demo
+                        <ExternalLink className="ml-2 h-3 w-3" />
+                      </a>
+                    </Button>
+              )}
             </div>
           </div>
         </div>
